@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// Desafio Super Trunfo - Países
+// Tema 2 - Comparação das Cartas
+
 int main()
 {
     // Definição das variáveis para armazenar as propriedades das cidades
@@ -91,23 +94,46 @@ int main()
     super_poder_carta2 = ((double)populacao_carta2 + area_carta2 + pib_carta2 +
                           (double)pontos_turisticos_carta2 + pib_per_capita_carta2 + (1.0 / densidade_carta2));
 
+    printf("\nCartas cadastradas com sucesso!\n");
+    printf("\n______________________.::Carta 1::._______________________\n");
+    printf("Estado:                  %c\n", estado_carta1);
+    printf("Código:                  %s\n", codigo_carta1);
+    printf("Nome da Cidade:          %s\n", cidade_carta1);
+    printf("População:               %lu\n", populacao_carta1);
+    printf("Área:                    %.2f km²\n", area_carta1);
+    printf("PIB:                     %.2f bilhões de reais\n", pib_carta1);
+    printf("Pontos Turísticos:       %d\n", pontos_turisticos_carta1);
+    printf("Densidade Populacional:  %.2f hab/km²\n", densidade_carta1);
+    printf("PIB per Capita:          %.2f reais\n", pib_per_capita_carta1);
+    printf("Super Poder:             %.2f\n", super_poder_carta1);
+
+    printf("\n______________________.::Carta 2::._______________________\n");
+    printf("Estado:                  %c\n", estado_carta2);
+    printf("Código:                  %s\n", codigo_carta2);
+    printf("Nome da Cidade:          %s\n", cidade_carta2);
+    printf("População:               %lu\n", populacao_carta2);
+    printf("Área:                    %.2f km²\n", area_carta2);
+    printf("PIB:                     %.2f bilhões de reais\n", pib_carta2);
+    printf("Pontos Turísticos:       %d\n", pontos_turisticos_carta2);
+    printf("Densidade Populacional:  %.2f hab/km²\n", densidade_carta2);
+    printf("PIB per Capita:          %.2f reais\n", pib_per_capita_carta2);
+    printf("Super Poder:             %.2f\n", super_poder_carta2);
+    printf("\n____________________________________________________________\n");
+
     // --- Comparação das Cartas ---
-    printf("\n\nComparando as cartas...\n\n");
     printf("O Atributo escolhido para verificar a carta vencedora é o PIB \n");
-    printf("%s tem o PIB de: %.2f Bilhões de reais\n", cidade_carta1, pib_carta1);
-    printf("%s tem o PIB de: %.2f Bilhões de reais\n", cidade_carta2, pib_carta2);
+    printf("A carta1 tem o PIB de: %.2f Bilhões de reais\n", pib_carta1);
+    printf("A carta 2 tem o PIB de: %.2f Bilhões de reais\n", pib_carta2);
+
     if (pib_carta1 > pib_carta2)
     {
-        printf("Vencedor: %s pois tem o PIB de: %.2f Bilhões de reais\n", cidade_carta1, pib_carta1);
-    }
-    else if (pib_carta2 > pib_carta1)
-    {
-        printf("Vencedor: %s pois tem o PIB de: %.2f Bilões de reais\n", cidade_carta2, pib_carta2);
+        printf("A carta 1 venceu!, pois tem o maior PIB: %.2f em comparação a carta2\n", pib_carta1);
     }
     else
     {
-        printf("as cidades tem o mesmo PIB de: %.2f Bilhões de reais\n", pib_carta1);
+        printf("A carta 2 venceu!, pois tem o maior PIB: %.2f em comparação a carta1\n", pib_carta2);
     }
+
     printf("\nPressione ENTER para continuar...\n");
     getchar(); // Limpa o buffer do teclado
     getchar(); // Aguarda o usuário pressionar ENTER
